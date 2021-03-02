@@ -32,7 +32,7 @@ export default defineComponent( {
 
 	data() {
 		return {
-			clicked: 0
+			clicked: 0,
 		};
 	}
 } );
