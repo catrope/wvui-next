@@ -1,7 +1,7 @@
+import replace from '@rollup/plugin-replace';
 import vue from '@vitejs/plugin-vue';
-
-const { resolve } = require( 'path' );
-const fs = require( 'fs' );
+import { version } from './package.json';
+import { resolve } from 'path';
 
 /**
  * @type {import('vite').UserConfig}
@@ -27,6 +27,10 @@ export default {
 		}
 	},
 	plugins: [
-		[ vue() ],
+		replace( {
+			preventAssignment: true,
+			VERSION: JSON.stringify( version )
+		} ),
+		vue(),
 	]
 };
