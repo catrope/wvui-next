@@ -1,5 +1,9 @@
 <template>
-	<span class="wvui-icon" :class="rootClasses" @click="onClick">
+	<span
+		class="wvui-icon"
+		:class="rootClasses"
+		@click="onClick"
+	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="20"
@@ -16,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import { AnyIcon, getIconPath, shouldFlip } from './iconTypes';
 
 /**
@@ -30,7 +34,7 @@ import { AnyIcon, getIconPath, shouldFlip } from './iconTypes';
  * prop provided to this component is either a string containing the icon's SVG
  * path or one of the icon types described in ./iconTypes.ts.
  */
-export default Vue.extend( {
+export default defineComponent( {
 	name: 'WvuiIcon',
 	props: {
 		/** The SVG path or an object containing that path plus other data. */
@@ -66,6 +70,9 @@ export default Vue.extend( {
 			default: (): string => document.documentElement.lang
 		}
 	},
+	emits: [
+		'click'
+	],
 	data(): Record<string, string> {
 		return {
 			// Initially, use the document dir. Once the component mounts, we'll
@@ -86,20 +93,20 @@ export default Vue.extend( {
 			return getIconPath( this.icon, this.langCode, this.dir );
 		}
 	},
-	mounted() {
-		const computedStyle = window.getComputedStyle( this.$el );
-		this.dir = computedStyle?.direction || this.dir;
-	},
 	methods: {
 		onClick( event: Event ): void {
 			this.$emit( 'click', event );
 		}
+	},
+	mounted() {
+		const computedStyle = window.getComputedStyle( this.$el );
+		this.dir = computedStyle?.direction || this.dir;
 	}
 } );
 </script>
 
 <style lang="less">
-@import ( reference ) '@/themes/wikimedia-ui.less';
+@import ( reference ) '../../themes/wikimedia-ui.less';
 
 .wvui-icon {
 	align-items: center;

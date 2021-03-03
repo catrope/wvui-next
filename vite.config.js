@@ -13,6 +13,7 @@ export default {
 			entry: resolve(__dirname, 'src/entries/wvui.ts'),
 			name: 'WVUI'
 		},
+		// TODO create a second build that uses src/entries/wvui-icons.ts
 
 		minify: true,
 

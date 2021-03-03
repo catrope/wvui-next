@@ -11,8 +11,7 @@ exports[`matches the snapshot Case 0 With icon: ({"icon": "path string"}) => HTM
     width="20"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!---->
-     
+    <!--v-if-->
     <g
       fill="#000"
     >
@@ -35,8 +34,7 @@ exports[`matches the snapshot Case 1 With icon and hex color: ({"icon": "path st
     width="20"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!---->
-     
+    <!--v-if-->
     <g
       fill="#ff6347"
     >
@@ -53,6 +51,7 @@ exports[`matches the snapshot Case 2 With icon and title: ({"icon": "path string
   class="wvui-icon"
 >
   <svg
+    aria-hidden="false"
     height="20"
     viewBox="0 0 20 20"
     width="20"
@@ -61,7 +60,6 @@ exports[`matches the snapshot Case 2 With icon and title: ({"icon": "path string
     <title>
       Add something
     </title>
-     
     <g
       fill="#000"
     >
@@ -84,8 +82,7 @@ exports[`matches the snapshot Case 3 With icon that should flip for RTL: ({"icon
     width="20"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!---->
-     
+    <!--v-if-->
     <g
       fill="#000"
     >

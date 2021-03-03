@@ -3,4 +3,4 @@
 export const version = VERSION;
 
 // Export all icons available in the library.
-export * as icons from '@/themes/icons';
+export * as icons from '../themes/icons';
