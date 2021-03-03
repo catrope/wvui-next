@@ -14,7 +14,7 @@
 		</wvui-button>
 
 		<wvui-button quiet @click="clicked++">
-			Quiet button
+			Quiet button (shh)
 		</wvui-button>
 
 		<pre>Clicked a total of {{ clicked }} times.</pre>
