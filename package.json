@@ -20,8 +20,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "npm run lint",
-    "lint": "eslint --max-warnings 0 . && tsc --noEmit"
+    "test": "npm run lint && npm run unit",
+    "lint": "eslint --max-warnings 0 . && tsc --noEmit",
+    "unit": "jest -c .jest/jest.config.json"
   },
   "main": "./dist/wvui-vite.umd.js",
   "module": "./dist/wvui-vite.es.js",
@@ -49,9 +50,11 @@
     "eslint-plugin-no-jquery": "^2.5.0",
     "jest": "^26.6.3",
     "less": "^4.1.1",
+    "ts-jest": "^26.5.2",
     "typescript": "^4.2.2",
     "vite": "^2.0.4",
     "vue": "^3.0.7",
+    "vue-jest": "^5.0.0-alpha",
     "wikimedia-ui-base": "^0.18.1"
   }
 }
