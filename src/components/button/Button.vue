@@ -30,7 +30,7 @@ export default defineComponent( {
 		quiet: Boolean
 	},
 	emits: [
-		'click'
+		// 'click'
 	],
 	computed: {
 		rootClasses(): Record<string, boolean> {
