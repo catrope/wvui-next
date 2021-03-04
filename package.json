@@ -45,7 +45,7 @@
     "@vue/test-utils": "^2.0.0-rc.2",
     "@vuedx/typescript-plugin-vue": "^0.6.3",
     "eslint": "^7.21.0",
-    "eslint-config-wikimedia": "^0.18.1",
+    "eslint-config-wikimedia": "^0.18.2",
     "eslint-plugin-jest": "^24.1.5",
     "eslint-plugin-no-jquery": "^2.5.0",
     "jest": "^26.6.3",
