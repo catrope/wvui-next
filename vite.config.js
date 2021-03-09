@@ -1,5 +1,6 @@
 import replace from '@rollup/plugin-replace';
 import vue from '@vitejs/plugin-vue';
+import typescript from 'rollup-plugin-typescript2';
 import { version } from './package.json';
 import { resolve } from 'path';
 
@@ -23,7 +24,9 @@ export default {
 				globals: {
 					vue: 'Vue'
 				}
-			}
+			},
+
+			plugins: [ typescript() ]
 		}
 	},
 	plugins: [

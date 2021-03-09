@@ -39,7 +39,7 @@ export default defineComponent( {
 				'wvui-button--progressive': this.action === PrimaryAction.Progressive,
 				'wvui-button--destructive': this.action === PrimaryAction.Destructive,
 				'wvui-button--framed': !this.quiet,
-				'wvui-button--quiet': this.quiet
+				'wvui-button--quiet': !!this.quiet
 			};
 		}
 	},

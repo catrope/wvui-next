@@ -1,10 +1,11 @@
 {
 	"compilerOptions": {
+		"declaration": true,
 		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "node",
 		"isolatedModules": true,
-		"strict": true,
+		"strict": false,
 		"sourceMap": true,
 		"lib": [
 			"esnext",
