@@ -33,7 +33,7 @@
 			"files": [ "src/**/*.[jt]s", "src/**/*.vue" ],
 			"excludedFiles": [ "*.test.ts" ],
 			"extends": [
-				"wikimedia/client",
+				"wikimedia/client-es6",
 				"wikimedia/language/es6",
 				"wikimedia/vue-es6"
 			],
