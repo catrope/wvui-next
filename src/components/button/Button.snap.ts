@@ -55,7 +55,11 @@ exports[`matches the snapshot Case 5 Slotted: ({}) => HTML 1`] = `
   class="wvui-button wvui-button--default wvui-button--framed"
 >
   
-  <stub />
+  
+  <span>
+    Label
+  </span>
+  
   
 </button>
 `;
