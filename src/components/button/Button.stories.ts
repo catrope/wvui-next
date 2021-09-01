@@ -82,11 +82,10 @@ export const AllCombinations = ( args: Args, { argTypes }: StoryContext ): Compo
 				</th>
 			</thead>
 			<tbody>
-				<tr v-for="disabled in [ false, true ]" :key="type + disabled">
+				<tr v-for="disabled in [ false, true ]" :key="'disabled-' + disabled">
 					<td v-for="(action, actionName) in actions" :key="action">
 						<wvui-button
 							:action="action"
-							:type="type"
 							:disabled="disabled"
 						>
 							{{ slotContents }}
