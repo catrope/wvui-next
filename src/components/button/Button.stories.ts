@@ -3,6 +3,7 @@ import { Args, StoryContext } from '@storybook/addons';
 import WvuiButton from './Button.vue';
 import { PrimaryAction } from '../../actions/PrimaryAction';
 import { filterKeys, makeActionArgTypes, makeActionListeners } from '../../utils/StoryUtils';
+import './Button.stories.less';
 
 // This whole mess is because we're not using ES2017's Object.values().
 const actionOptions = (
@@ -38,13 +39,7 @@ export default {
 	}
 };
 
-export interface ButtonProps {
-	action: PrimaryAction,
-	quiet: boolean,
-	disabled: boolean
-}
-
-const Template = ( args: Args, { argTypes }: StoryContext ): Component => ( {
+export const Configurable = ( args: Args, { argTypes }: StoryContext ): Component => ( {
 	components: { WvuiButton },
 	setup() {
 		return {
@@ -61,11 +56,75 @@ const Template = ( args: Args, { argTypes }: StoryContext ): Component => ( {
 	`
 } );
 
-export const Configurable = Template.bind( {} );
-// FIXME: some TypeScript wizardry is needed here.
 Configurable.args = {
 	action: PrimaryAction.Default,
 	quiet: false,
 	disabled: false,
 	default: 'Click me'
+};
+
+export const AllCombinations = ( args: Args, { argTypes }: StoryContext ): Component => ( {
+	components: { WvuiButton },
+	setup() {
+		return {
+			args,
+			slotContents: args.default,
+			filteredProps: filterKeys( args, [ 'default' ] ),
+			actionListeners: makeActionListeners( args, argTypes ),
+			actions: PrimaryAction
+		};
+	},
+	template: `
+		<table class="sb-button-combinations">
+			<thead>
+				<th v-for="(action, actionName) in actions" :key="action" scope="col">
+					{{ actionName }}
+				</th>
+			</thead>
+			<tbody>
+				<tr v-for="disabled in [ false, true ]" :key="type + disabled">
+					<td v-for="(action, actionName) in actions" :key="action">
+						<wvui-button
+							:action="action"
+							:type="type"
+							:disabled="disabled"
+						>
+							{{ slotContents }}
+						</wvui-button>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot class="sb-button-combinations-hint-mobile">
+				<tr>
+					<td
+						:colspan="Object.keys( actions ).length + 1"
+					>
+						Please scroll horizontally to see all combinations.
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	`
+} );
+
+AllCombinations.args = {
+	default: 'Click me'
+};
+
+AllCombinations.argTypes = {
+	action: {
+		table: {
+			disable: true
+		}
+	},
+	quiet: {
+		table: {
+			disable: true
+		}
+	},
+	disabled: {
+		table: {
+			disable: true
+		}
+	}
 };
