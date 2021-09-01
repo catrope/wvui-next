@@ -22,7 +22,9 @@
     "serve": "vite preview",
     "test": "npm run lint && npm run unit",
     "lint": "eslint --max-warnings 0 . && tsc --noEmit",
-    "unit": "jest -c .jest/jest.config.json"
+    "unit": "jest -c .jest/jest.config.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "main": "./dist/wvui-vite.umd.js",
   "module": "./dist/wvui-vite.es.js",
@@ -36,7 +38,12 @@
     "dist"
   ],
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@rollup/plugin-replace": "^3.0.0",
+    "@storybook/addon-actions": "^6.4.0-alpha.33",
+    "@storybook/addon-essentials": "^6.4.0-alpha.33",
+    "@storybook/addon-links": "^6.4.0-alpha.33",
+    "@storybook/vue3": "^6.4.0-alpha.33",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
@@ -44,17 +51,21 @@
     "@vue/compiler-sfc": "^3.2.4",
     "@vue/test-utils": "^2.0.0-rc.12",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-config-wikimedia": "^0.20.0",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-no-jquery": "^2.6.0",
     "jest": "^26.6.3",
     "less": "^4.1.1",
+    "storybook-builder-vite": "0.0.12",
     "ts-jest": "^26.5.6",
     "typescript": "^4.3.5",
     "vite": "^2.5.0",
     "vue": "^3.2.4",
     "vue-jest": "^5.0.0-alpha",
+    "vue-loader": "^16.5.0",
     "wikimedia-ui-base": "^0.19.0"
-  }
+  },
+  "dependencies": {}
 }
