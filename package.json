@@ -43,6 +43,7 @@
     "@storybook/addon-actions": "^6.4.0-alpha.33",
     "@storybook/addon-essentials": "^6.4.0-alpha.33",
     "@storybook/addon-links": "^6.4.0-alpha.33",
+    "@storybook/addon-toolbars": "^6.3.8",
     "@storybook/vue3": "^6.4.0-alpha.33",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
