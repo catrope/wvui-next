@@ -32,6 +32,11 @@ export default {
 		default: {
 			control: 'text'
 		},
+		defaultInitial: {
+			table: {
+				disable: true
+			}
+		},
 		...makeActionArgTypes( [ 'click' ] )
 	},
 	parameters: {
@@ -39,12 +44,14 @@ export default {
 	}
 };
 
-export const Configurable = ( args: Args, { argTypes }: StoryContext ): Component => ( {
+export const Configurable = (
+	args: Args, { argTypes, globals: { locale, messages } }: StoryContext
+): Component => ( {
 	components: { WvuiButton },
 	setup() {
 		return {
 			args,
-			slotContents: args.default,
+			slotContents: args.default || messages[ locale ][ args.defaultInitial ],
 			filteredProps: filterKeys( args, [ 'default' ] ),
 			actionListeners: makeActionListeners( args, argTypes )
 		};
@@ -60,7 +67,8 @@ Configurable.args = {
 	action: PrimaryAction.Default,
 	quiet: false,
 	disabled: false,
-	default: 'Click me'
+	default: '',
+	defaultInitial: 'short'
 };
 
 export const AllCombinations = ( args: Args, { argTypes }: StoryContext ): Component => ( {
