@@ -30,7 +30,12 @@
 		// Extends: all **client** JavaScript, TypeScript, and Vue files (_excluding_ TypeScript
 		// tests).
 		{
-			"files": [ "src/**/*.[jt]s", "src/**/*.vue" ],
+			"files": [
+				"src/**/*.[jt]s",
+				"src/**/*.vue",
+				"docs/**/*.[jt]s",
+				"docs/**/*.vue"
+			],
 			"excludedFiles": [ "*.test.ts" ],
 			"extends": [
 				"wikimedia/client-es6",

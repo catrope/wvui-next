@@ -40,7 +40,7 @@ describe( 'matches the snapshot', () => {
 } );
 
 describe( 'Radio', () => {
-	it( 'emits input event with value when selected', async () => {
+	it( 'emits update:modelValue event with value when selected', async () => {
 		const props = {
 			modelValue: 'radio-1',
 			inputValue: 'radio-2',
@@ -52,8 +52,8 @@ describe( 'Radio', () => {
 		input.checked = true;
 		await wrapper.find( 'input' ).trigger( 'change' );
 
-		expect( wrapper.emitted( 'input' ) ).toBeTruthy();
-		expect( wrapper.emitted( 'input' )?.[ 0 ] ).toEqual( [ 'radio-2' ] );
+		expect( wrapper.emitted( 'update:modelValue' ) ).toBeTruthy();
+		expect( wrapper.emitted( 'update:modelValue' )?.[ 0 ] ).toEqual( [ 'radio-2' ] );
 	} );
 
 	it( 'is selected when modelValue matches inputValue', async () => {

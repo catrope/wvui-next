@@ -33,7 +33,7 @@ You can use any Vue features within markdown files. See components for examples.
 
 ### Importing code snippets
 
-You can import code and display it, which might be useful for avoiding redundant
+You can import code and display it, which is be useful for avoiding redundant
 code blocks when both displaying a component and showing the code.
 
 ### Code blocks with line highlighting

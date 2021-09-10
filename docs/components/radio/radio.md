@@ -3,7 +3,9 @@ sidebarDepth: 3
 ---
 
 <script setup>
+import Wrapper from '../../utils/Wrapper.vue';
 import RadioGroup from './RadioGroup.vue';
+import InlineRadios from './InlineRadios.vue';
 </script>
 
 # Radio
@@ -45,8 +47,16 @@ The `v-model` value is the `inputValue` of the Radio that is currently on.
 
 ### Radio group
 
+<Wrapper>
 <RadioGroup />
+</Wrapper>
 
 <<< @/components/radio/RadioGroup.vue
 
 ### Inline radios
+
+<Wrapper>
+<InlineRadios />
+</Wrapper>
+
+<<< @/components/radio/RadioGroup.vue

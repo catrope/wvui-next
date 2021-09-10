@@ -3,6 +3,7 @@ sidebarDepth: 3
 ---
 
 <script setup>
+import Wrapper from '../../utils/Wrapper.vue';
 import WvuiButton from '../../../src/components/button/Button.vue';
 </script>
 
@@ -38,7 +39,9 @@ in both the markdown and the resulting table.
 
 ### Default
 
+<Wrapper>
 <WvuiButton>Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton>Click me</WvuiButton>
@@ -46,7 +49,9 @@ in both the markdown and the resulting table.
 
 ### Progressive
 
+<Wrapper>
 <WvuiButton action="progressive">Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton action="progressive">Click me</WvuiButton>
@@ -54,7 +59,9 @@ in both the markdown and the resulting table.
 
 ### Destructive
 
+<Wrapper>
 <WvuiButton action="destructive">Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton action="destructive">Click me</WvuiButton>
@@ -62,7 +69,9 @@ in both the markdown and the resulting table.
 
 ### Default, quiet
 
+<Wrapper>
 <WvuiButton :quiet="true">Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton :quiet="true">Click me</WvuiButton>
@@ -70,7 +79,9 @@ in both the markdown and the resulting table.
 
 ### Progressive, quiet
 
+<Wrapper>
 <WvuiButton action="progressive" :quiet="true">Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton action="progressive" :quiet="true">Click me</WvuiButton>
@@ -78,7 +89,9 @@ in both the markdown and the resulting table.
 
 ### Destructive, quiet
 
+<Wrapper>
 <WvuiButton action="destructive" :quiet="true">Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton action="destructive" :quiet="true">Click me</WvuiButton>
@@ -86,7 +99,9 @@ in both the markdown and the resulting table.
 
 ### Disabled
 
+<Wrapper>
 <WvuiButton disabled>Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton disabled>Click me</WvuiButton>
@@ -94,7 +109,9 @@ in both the markdown and the resulting table.
 
 ### Disabled, quiet
 
+<Wrapper>
 <WvuiButton :quiet="true" disabled>Click me</WvuiButton>
+</Wrapper>
 
 ```vue
 <WvuiButton :quiet="true" disabled>Click me</WvuiButton>

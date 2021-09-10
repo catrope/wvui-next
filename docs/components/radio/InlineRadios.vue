@@ -1,13 +1,12 @@
 <template>
 	<div>
-		<p>Radio group value: {{ radioValue }}</p>
 		<wvui-radio
 			v-for="radio in radios"
 			:key="'radio-' + radio.value"
 			v-model="radioValue"
-			name="radio-group"
+			name="inline-radios"
 			:input-value="radio.value"
-			:disabled="radio.disabled"
+			:inline="true"
 			@update:model-value="onUpdate"
 		>
 			{{ radio.label }}
@@ -20,30 +19,18 @@ import { defineComponent, ref } from 'vue';
 import WvuiRadio from '../../../src/components/radio/Radio.vue';
 
 export default defineComponent( {
-	name: 'RadioGroup',
+	name: 'InlineRadios',
 	components: { WvuiRadio },
 	setup() {
 		const radioValue = ref( 'radio-2' );
 		const radios = [
 			{
 				label: 'Radio 1',
-				value: 'radio-1',
-				disabled: false
+				value: 'radio-1'
 			},
 			{
-				label: 'Radio 2 (initially selected)',
-				value: 'radio-2',
-				disabled: false
-			},
-			{
-				label: 'Radio 3, which has a very long label that spans onto a second line',
-				value: 'radio-3',
-				disabled: false
-			},
-			{
-				label: 'Radio 4 (disabled)',
-				value: 'radio-4',
-				disabled: true
+				label: 'Radio 2',
+				value: 'radio-2'
 			}
 		];
 
@@ -60,10 +47,3 @@ export default defineComponent( {
 	}
 } );
 </script>
-
-<style scoped>
-p {
-	font-weight: bold;
-	margin-top: 0;
-}
-</style>
