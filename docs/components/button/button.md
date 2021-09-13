@@ -3,37 +3,12 @@ sidebarDepth: 3
 ---
 
 <script setup>
-import Wrapper from '../../utils/Wrapper.vue';
 import WvuiButton from '../../../src/components/button/Button.vue';
 </script>
 
 # Button
 
 A `<button>` element wrapping slotted content.
-
-## Usage
-
-### Props
-
-**TODO:** We could use a better way to describe custom types like PrimaryAction. This is cluttered
-in both the markdown and the resulting table.
-
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| **action** | The kind of action taken when clicked | `PrimaryAction` <br><br>Options:<br>`default` <br>`progressive` <br>`destructive` | `PrimaryAction.Default` |
-| **quiet** | True if button should be visually less prominent | `Boolean` | `false` |
-
-### Slots
-
-| Name | Description | Default |
-| --- | --- | --- |
-| **default** | Button content | - |
-
-### Events
-
-| Name | Description | Value |
-| --- | --- | --- |
-| **click** | Emitted on click | - |
 
 ## Demos
 
@@ -116,3 +91,27 @@ in both the markdown and the resulting table.
 ```vue
 <WvuiButton :quiet="true" disabled>Click me</WvuiButton>
 ```
+
+## Usage
+
+### Props
+
+**TODO:** We could use a better way to describe custom types like PrimaryAction. This is cluttered
+in both the markdown and the resulting table.
+
+| Name | Description | Type | Default |
+| --- | --- | --- | --- |
+| **action** | The kind of action taken when clicked | `PrimaryAction` <br><br>Options:<br>`default` <br>`progressive` <br>`destructive` | `PrimaryAction.Default` |
+| **quiet** | True if button should be visually less prominent | `Boolean` | `false` |
+
+### Slots
+
+| Name | Description | Default |
+| --- | --- | --- |
+| **default** | Button content | - |
+
+### Events
+
+| Name | Description | Value |
+| --- | --- | --- |
+| **click** | Emitted on click | - |

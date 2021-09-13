@@ -15,26 +15,6 @@ import DemoComponent from './DemoComponent.vue';
 
 Component description
 
-## Usage
-
-### Props
-
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| **propName** | Prop description | `PropType` | `defaultValue` |
-
-### Slots
-
-| Name | Description | Default |
-| --- | --- | --- |
-| **default** | Slot description | Default value (or leave blank) |
-
-### Events
-
-| Name | Description | Value |
-| --- | --- | --- |
-| **eventName** | Event description | Emitted value (or leave blank) |
-
 ## Demos
 
 ### First Demo
@@ -61,3 +41,23 @@ Or you can add a demo component and import it as a snippet to show the code:
 ### Second Demo
 
 ...would go here
+
+## Usage
+
+### Props
+
+| Name | Description | Type | Default |
+| --- | --- | --- | --- |
+| **propName** | Prop description | `PropType` | `defaultValue` |
+
+### Slots
+
+| Name | Description | Default |
+| --- | --- | --- |
+| **default** | Slot description | Default value (or leave blank) |
+
+### Events
+
+| Name | Description | Value |
+| --- | --- | --- |
+| **eventName** | Event description | Emitted value (or leave blank) |

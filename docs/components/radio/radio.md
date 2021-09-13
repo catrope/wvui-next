@@ -3,7 +3,6 @@ sidebarDepth: 3
 ---
 
 <script setup>
-import Wrapper from '../../utils/Wrapper.vue';
 import RadioGroup from './RadioGroup.vue';
 import InlineRadios from './InlineRadios.vue';
 </script>
@@ -18,6 +17,24 @@ output a Radio component for each one. Each Radio will have the same `v-model`
 and `name` props, but different `inputValue` props and label content.
 
 The `v-model` value is the `inputValue` of the Radio that is currently on.
+
+## Demos
+
+### Radio group
+
+<Wrapper>
+<RadioGroup />
+</Wrapper>
+
+<<< @/components/radio/RadioGroup.vue
+
+### Inline radios
+
+<Wrapper>
+<InlineRadios />
+</Wrapper>
+
+<<< @/components/radio/RadioGroup.vue
 
 ## Usage
 
@@ -42,21 +59,3 @@ The `v-model` value is the `inputValue` of the Radio that is currently on.
 | Name | Description | Value |
 | --- | --- | --- |
 | **update:modelValue** | Emitted on input change | New `modelValue` |
-
-## Demos
-
-### Radio group
-
-<Wrapper>
-<RadioGroup />
-</Wrapper>
-
-<<< @/components/radio/RadioGroup.vue
-
-### Inline radios
-
-<Wrapper>
-<InlineRadios />
-</Wrapper>
-
-<<< @/components/radio/RadioGroup.vue
