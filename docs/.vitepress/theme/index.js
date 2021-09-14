@@ -5,7 +5,7 @@ import './custom.css';
 
 export default {
 	...DefaultTheme,
-	enhanceApp({ app }) {
-		app.component('Wrapper', Wrapper)
+	enhanceApp( { app } ) {
+		app.component( 'Wrapper', Wrapper )
 	}
 };

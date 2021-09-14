@@ -23,18 +23,30 @@ The `v-model` value is the `inputValue` of the Radio that is currently on.
 ### Radio group
 
 <Wrapper>
+<template v-slot:demo>
 <RadioGroup />
-</Wrapper>
+</template>
+
+<template v-slot:code>
 
 <<< @/components/radio/RadioGroup.vue
+
+</template>
+</Wrapper>
 
 ### Inline radios
 
 <Wrapper>
+<template v-slot:demo>
 <InlineRadios />
-</Wrapper>
+</template>
 
-<<< @/components/radio/RadioGroup.vue
+<template v-slot:code>
+
+<<< @/components/radio/InlineRadios.vue
+
+</template>
+</Wrapper>
 
 ## Usage
 
