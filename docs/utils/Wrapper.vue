@@ -1,5 +1,5 @@
 <template>
-	<div class="vp-wrapper" :class="rootClasses">
+	<div class="vp-wrapper">
 		<div class="vp-wrapper__demo">
 			<slot name="demo" />
 			<wvui-button
@@ -28,18 +28,12 @@ export default defineComponent( {
 		const buttonLabel = computed( () => {
 			return showCode.value === true ? 'Hide code' : 'Show code';
 		} );
-		const rootClasses = computed( () => {
-			return {
-				'vp-wrapper--show-code': showCode.value
-			};
-		} );
 		const onClick = (): void => {
 			showCode.value = !showCode.value;
 		};
 		return {
 			showCode,
 			buttonLabel,
-			rootClasses,
 			onClick
 		};
 	}
