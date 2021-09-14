@@ -12,11 +12,6 @@
 import { PrimaryAction, isPrimaryAction } from '../../actions/PrimaryAction';
 import { defineComponent, PropType } from 'vue';
 
-/**
- * A button wrapping slotted content.
- *
- * @fires {Event} click
- */
 export default defineComponent( {
 	name: 'WvuiButton',
 	props: {
